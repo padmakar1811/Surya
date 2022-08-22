@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/auth_navigation"
+    app:startDestination="@id/myLoginFragment">
+
+    <fragment
+        android:id="@+id/myLoginFragment"
+        android:name="com.sveltetech.surya.fragment.LoginFragment"
+        android:label="fragment_my_home"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_verifyNoFragment"
+            app:destination="@id/OTPFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/OTPFragment"
+        android:name="com.sveltetech.surya.fragment.OTPFragment"
+        android:label="OTPFragment" >
+        <action
+            android:id="@+id/action_OTPFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.sveltetech.surya.fragment.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+</navigation>

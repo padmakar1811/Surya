@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Surya</string>
+    <!--    PERMISSIONS text   -->
+    <string name="alert_internet">There is no Internet Connectivity</string>
+    <string name="alert_text">Alert</string>
+    <string name="server_alert">Unable to connect Server.</string>
+    <string name="permission_camera_rationale11">Some permission are required to use the app.</string>
+    <string name="reqst_permission">Request permission?</string>
+    <string name="resendtext">Did not receive the OTP?</string>
+    <string name="resendtexthead">RESEND</string>
+    <string name="please_enter_your_details">Please enter your details</string>
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+    <!--  Filter Text     -->
+    <string name="form_date">From Date</string>
+    <string name="to_date">To Date</string>
+    <string name="select_date">Select Date</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="profile_info">Profile info</string>
+    <string name="please_provide_your_name_and_an_optional_user_photo">Write here about yourself and an\noptional user photo</string>
+    <string name="ok">Ok</string>
+    <string name="gallery">Gallery</string>
+    <string name="camera">Camera</string>
+    <string name="profile_photo">Profile Photo</string>
+    <string name="loading">Loading</string>
+    <string name="go_to_settings">Go to settings</string>
+    <string name="required_to_enter_name">You are required to enter your name before continuing</string>
+
+</resources>

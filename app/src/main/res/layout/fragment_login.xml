@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:fillViewport="true"
+        android:fitsSystemWindows="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:orientation="vertical"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_logo" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Enter Number"
+                    android:textAppearance="@style/TextFieldBold"
+                    android:textColor="@color/white"
+                    android:textSize="22sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:background="@drawable/edit_text_background">
+
+                    <com.rilixtech.CountryCodePicker
+                        android:id="@+id/countrycode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        app:ccp_textColor="@color/white"
+                        app:ccp_textSize="24sp"
+                        app:ccp_hideNameCode="true"
+                        app:ccp_dialogTextColor="@color/white"
+                        app:ccp_backgroundColor="@color/editBorderColor"
+                        app:ccp_showFlag="false"
+                        android:layout_marginStart="@dimen/_8sdp"/>
+
+
+                    <ImageView
+                        android:id="@+id/ivMobile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:src="@drawable/ic_mobile" />
+
+
+                    <TextView
+                        android:id="@+id/ivborder"
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/_2sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_marginBottom="@dimen/_8sdp"
+                        android:layout_toEndOf="@+id/countrycode"
+                        android:background="@color/colorAccent" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editMobile"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:layout_toEndOf="@+id/ivborder"
+                        android:background="@null"
+                        android:digits="0123456789"
+                        android:hint="Enter Mobile Number"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"
+                        android:maxLength="15"
+                        android:paddingStart="12dp"
+                        android:singleLine="true"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white"
+                        android:textSize="15sp" />
+
+
+                </RelativeLayout>
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnOTP"
+                    android:layout_width="160dp"
+                    android:layout_height="64dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:text="Get OTP"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:backgroundTint="@color/colorAccent"
+                    app:cornerRadius="12dp"
+                    app:iconGravity="textStart"
+                    app:iconTint="@color/textColor" />
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

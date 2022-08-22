@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.ProfileFragment">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:fitsSystemWindows="true"
+            android:clipChildren="false"
+            android:animateLayoutChanges="true"
+            app:liftOnScroll="false"
+            app:elevation="0dp"
+            android:elevation="0dp">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@android:color/transparent"
+                app:title="@string/profile_info"
+                app:titleMarginStart="160dp"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_20sdp"
+                app:titleTextColor="@color/white"
+                app:layout_collapseMode="pin">
+
+            </com.google.android.material.appbar.MaterialToolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="@string/please_provide_your_name_and_an_optional_user_photo"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:lineSpacingExtra="2.5dp"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_picture"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/circular_bg"
+                app:civ_border_color="#FFFFFF"
+                app:civ_border_width="2dp"
+                app:civ_circle_background_color="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView5"
+                tools:visibility="visible">
+
+            </de.hdodenhof.circleimageview.CircleImageView>
+
+
+            <RelativeLayout
+                android:id="@+id/name_textinput_layout"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:layout_marginEnd="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profile_picture"
+                android:background="@drawable/edit_text_background">
+
+
+                <ImageView
+                    android:id="@+id/ivMobile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_alignParentStart="true"
+                    android:src="@drawable/ic_profile" />
+
+
+                <TextView
+                    android:id="@+id/ivborder"
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:layout_toEndOf="@+id/ivMobile"
+                    android:background="@color/colorAccent" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editfullname"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_toEndOf="@+id/ivborder"
+                    android:background="@null"
+                    android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 123456789"
+                    android:hint="Enter your name"
+                    android:imeOptions="actionDone"
+                    android:inputType="textCapWords"
+                    android:paddingStart="12dp"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="15sp" />
+
+
+            </RelativeLayout>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/submit"
+                android:layout_width="160dp"
+                android:layout_height="56dp"
+                android:layout_marginBottom="16dp"
+                android:text="Submit"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:backgroundTint="@color/colorAccent"
+                app:cornerRadius="12dp"
+                app:iconGravity="textStart"
+                app:iconTint="@color/textColor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/_20sdp"
+                app:layout_constraintTop_toBottomOf="@+id/name_textinput_layout" />
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/profile_picture"
+                app:layout_constraintEnd_toEndOf="@+id/profile_picture"
+                app:layout_constraintStart_toStartOf="@+id/profile_picture"
+                app:layout_constraintTop_toTopOf="@+id/profile_picture"
+                tools:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/add_photo_ic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="@+id/profile_picture"
+                app:layout_constraintEnd_toEndOf="@+id/profile_picture"
+                app:layout_constraintStart_toStartOf="@+id/profile_picture"
+                app:layout_constraintTop_toTopOf="@+id/profile_picture"
+                app:srcCompat="@drawable/ic_add_a_photo_50dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</FrameLayout>
