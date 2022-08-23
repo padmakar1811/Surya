@@ -2,8 +2,6 @@ package com.sveltetech.surya.auth;
 
 import static com.sveltetech.surya.app.AppConfig.PAYLOAD_BUNDLE;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -11,10 +9,10 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.sveltetech.surya.MainActivity;
 import com.sveltetech.surya.app.PreferencesManager;
 import com.sveltetech.surya.constants.BaseActivity;
 import com.sveltetech.surya.databinding.ActivityConfirmPinBinding;
+import com.sveltetech.surya.ui.main.MainActivity;
 
 public class ConfirmPinActivity extends BaseActivity {
     ActivityConfirmPinBinding binding;

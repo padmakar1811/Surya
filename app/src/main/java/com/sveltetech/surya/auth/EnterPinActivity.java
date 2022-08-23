@@ -1,18 +1,15 @@
 package com.sveltetech.surya.auth;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.sveltetech.surya.MainActivity;
-import com.sveltetech.surya.R;
 import com.sveltetech.surya.app.PreferencesManager;
 import com.sveltetech.surya.constants.BaseActivity;
 import com.sveltetech.surya.databinding.ActivityEnterPinBinding;
+import com.sveltetech.surya.ui.main.MainActivity;
 
 public class EnterPinActivity extends BaseActivity {
 

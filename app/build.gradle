@@ -14,11 +14,9 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-    viewBinding{
-        enabled = true
-    }
     buildFeatures {
         viewBinding true
+        dataBinding true
     }
     buildTypes {
         release {
@@ -59,6 +57,12 @@ dependencies {
     implementation 'com.github.aabhasr1:OtpView:v1.1.2'
     implementation 'com.github.joielechong:countrycodepicker:2.1.5'
     implementation "androidx.work:work-runtime:2.7.1"
+    //    Room DB
+    implementation "androidx.room:room-runtime:2.4.3"
+    annotationProcessor "androidx.room:room-compiler:2.2.5"
+    testImplementation "androidx.room:room-testing:2.2.5"
+
+    implementation 'androidx.viewpager:viewpager:1.0.0'
 
 
 }

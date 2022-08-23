@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary">
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/profile_picture"
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:src="@drawable/ic_person_24dp" />
+
+                    <TextView
+                        android:id="@+id/profile_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:gravity="bottom|center_vertical"
+                        android:textAlignment="gravity"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:layout_toEndOf="@+id/profile_picture"
+                        tools:text="Patrick Garg" />
+
+                    <TextView
+                        android:id="@+id/profile_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:textColor="@color/white"
+                        android:textSize="13sp"
+                        android:layout_below="@+id/profile_name"
+                        android:layout_toEndOf="@+id/profile_picture"
+                        tools:text="HI there! I'm using App." />
+
+                    <TextView
+                        android:id="@+id/divider"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@color/white"
+                        android:layout_below="@+id/profile_picture" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/divider"
+                        android:layout_marginTop="8dp"
+                        android:overScrollMode="never"
+                        tools:itemCount="3"
+                        tools:listitem="@layout/adapter_title_subtitle_list_item" />
+
+                    <TextView
+                        android:id="@+id/divider1"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/white"
+                        android:layout_below="@+id/recycler_view"/>
+
+                    <ImageView
+                        android:id="@+id/icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginBottom="24dp"
+                        android:layout_below="@+id/divider1"
+                        android:background="@drawable/ic_friend_24dp"
+                        android:foreground="@drawable/ic_friend_24dp"
+                        android:foregroundTint="@color/colorAccent" />
+
+                    <TextView
+                        android:id="@+id/invite_friend_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="24dp"
+                        android:text="@string/invite_a_friend"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:layout_below="@+id/divider1"
+                        android:layout_toEndOf="@+id/icon" />
+
+                    <TextView
+                        android:id="@+id/textView15"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="32dp"
+                        android:text="from"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:layout_below="@+id/invite_friend_title"/>
+
+                    <TextView
+                        android:id="@+id/textView17"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="24dp"
+                        android:text="SVELTETECH"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:layout_below="@+id/textView15" />
+
+
+                </RelativeLayout>
+
+</LinearLayout>

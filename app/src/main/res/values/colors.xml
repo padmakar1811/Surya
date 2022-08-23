@@ -6,7 +6,7 @@
     <color name="organge">#FD705A</color>
     <color name="bg_otp">#FDF5F1</color>
     <color name="bg_tab">#EBEBEB</color>
-    <color name="background">#44000000</color>
+    <color name="background">#1E1E26</color>
     <color name="red">#F44336</color>
     <color name="success">#15B79E</color>
     <color name="failure">#FD705A</color>
@@ -54,4 +54,28 @@
     <color name="dashbaord_color4">#019dd8</color>
     <color name="inactive_color">#8e8e8e</color>
     <color name="active_color">#31c2d2</color>
+    <color name="colorOutgoingChatBubble">#DCF8C6</color>
+    <color name="colorChatBackground">#ECE5DD</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorCheckMarkBlue">#34B7F1</color>
+
+    <color name="colorPrimaryAlternate">#435A64</color>
+    <color name="colorPrimaryDarkAlternate">#36464E</color>
+    <color name="colorAccentAlternate">#2FBDCA</color>
+    <color name="colorOutgoingChatBubbleAlternate">#128C7E</color>
+
+
+    <color name="colorGreen">#55C364</color>
+    <color name="colorGreen2">#76B89C</color>
+    <color name="colorRed">#F33535</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorGreyBlue">#AFD1DF</color>
+    <color name="colorOrange">#FF7D27</color>
+    <color name="colorBlue">#34B7F1</color>
+    <color name="colorGreen3">#0C613C</color>
+    <color name="colorTransparent">#00FFFFFF</color>
+
+    <color name="colorGrey">#808080</color>
+    <color name="colorPurple">#8536F4</color>
+
 </resources>

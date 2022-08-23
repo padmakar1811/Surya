@@ -1,0 +1,20 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_search"
+        android:icon="@drawable/ic_search"
+        android:title="@string/search"
+        android:contentDescription="Search"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/menu_sidemenu"
+        android:icon="@drawable/ic_side_menu"
+        android:title="setting"
+        android:contentDescription="Settings"
+        app:showAsAction="ifRoom" />
+
+
+
+
+</menu>

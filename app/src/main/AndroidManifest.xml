@@ -41,30 +41,41 @@
         android:networkSecurityConfig="@xml/security_config"
         android:requestLegacyExternalStorage="true"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
+        android:theme="@style/AppThemeLight"
         android:usesCleartextTraffic="true"
         tools:replace="android:icon">
         <activity
+            android:name=".settings.SettingsActivity"
+            android:exported="false"
+            android:theme="@style/AppThemeLight.NoActionBar"/>
+        <activity
             android:name=".auth.ForgotPinActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".auth.EnterPinActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".auth.ConfirmPinActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".auth.CreatePinActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".auth.AuthActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/AppTheme" />
         <activity
-            android:name=".MainActivity"
-            android:exported="false" />
+            android:name=".ui.main.MainActivity"
+            android:exported="false"
+            android:theme="@style/AppThemeLight.NoActionBar" />
         <activity
             android:name=".auth.SplashActivity"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/AppThemeLight.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
