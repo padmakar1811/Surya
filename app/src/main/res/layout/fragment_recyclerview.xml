@@ -1,26 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
-
-    <androidx.constraintlayout.widget.ConstraintLayout
+<androidx.appcompat.widget.LinearLayoutCompat
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:clipToPadding="false"
-        android:overScrollMode="never"
-        android:background="@color/colorPrimary"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        android:orientation="vertical"
+        android:background="@color/colorPrimary">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycler_view"
-            android:layout_width="0dp"
+    <RelativeLayout
+        android:id="@+id/rlPrivacy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/edit_text_background">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:overScrollMode="never" />
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_lock_grey_24dp"
+            android:foregroundTint="@color/colorAccent"
+            android:layout_alignParentStart="true"/>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/ivborder"
+            android:layout_width="1dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="22dp"
+            android:layout_marginBottom="20dp"
+            android:layout_toEndOf="@+id/icon"
+            android:background="@color/colorAccent"
+            android:layout_centerVertical="true"
+            android:layout_alignParentTop="true"/>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:gravity="center_vertical"
+            android:textAppearance="@style/TextFieldBold"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:text="@string/privacy"
+            android:layout_toEndOf="@+id/ivborder" />
 
 
-</layout>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rlDeleteMyAccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/edit_text_background">
+
+        <ImageView
+            android:id="@+id/icon2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:foregroundTint="@color/colorAccent"
+            android:src="@drawable/ic_delete_grey_24dp" />
+
+        <TextView
+            android:id="@+id/ivborder2"
+            android:layout_width="1dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="22dp"
+            android:layout_marginBottom="20dp"
+            android:layout_toEndOf="@+id/icon2"
+            android:background="@color/colorAccent"
+            android:layout_centerVertical="true"
+            android:layout_alignParentTop="true"/>
+
+        <TextView
+            android:id="@+id/title2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_toEndOf="@+id/ivborder2"
+            android:gravity="center_vertical"
+            android:text="@string/delete_my_account"
+            android:textAppearance="@style/TextFieldBold"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+
+    </RelativeLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
+
+

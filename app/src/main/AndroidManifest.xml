@@ -47,6 +47,7 @@
         <activity
             android:name=".settings.SettingsActivity"
             android:exported="false"
+            android:windowSoftInputMode="stateVisible|adjustResize"
             android:theme="@style/AppThemeLight.NoActionBar"/>
         <activity
             android:name=".auth.ForgotPinActivity"

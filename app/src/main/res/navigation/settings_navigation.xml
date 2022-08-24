@@ -23,10 +23,38 @@ xmlns:tools="http://schemas.android.com/tools"
     <fragment
         android:id="@+id/recycleViewFragment"
         android:name="com.sveltetech.surya.settings.ui.RecycleViewFragment"
-        android:label="RecycleViewFragment" />
+        android:label="RecycleViewFragment" >
+
+        <action
+            android:id="@+id/action_recycleViewFragment_to_privacyFragment"
+            app:destination="@id/privacyFragment" />
+
+        <action
+            android:id="@+id/action_recycleViewFragment_to_deletemyaccountFragment"
+            app:destination="@id/deleteMyAccountFragment" />
+    </fragment>
     <fragment
         android:id="@+id/viewProfileFragment"
         android:name="com.sveltetech.surya.settings.ui.ViewProfileFragment"
-        android:label="Profile" />
+        android:label="@string/profile" >
+
+    <action
+        android:id="@+id/action_profileFragment_to_viewProfilePictureFragment2"
+        app:destination="@id/viewProfilePictureFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/viewProfilePictureFragment"
+        android:name="com.sveltetech.surya.ui.ViewProfilePictureFragment"
+        android:label="Profile Photo" />
+    <fragment
+        android:id="@+id/privacyFragment"
+        android:name="com.sveltetech.surya.settings.preference_screens.PrivacyFragment"
+        android:label="@string/privacy" />
+    <fragment
+        android:id="@+id/deleteMyAccountFragment"
+        android:name="com.sveltetech.surya.settings.ui.DeleteMyAccountFragment"
+        android:label="Delete My Account" />
+
 
 </navigation>

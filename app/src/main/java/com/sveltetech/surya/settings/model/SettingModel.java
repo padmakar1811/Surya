@@ -2,22 +2,21 @@ package com.sveltetech.surya.settings.model;
 
 public class SettingModel {
 
-    String title,subtitle;
-    int icon;
+    int title,subtitle,icon;
 
-    public String getTitle() {
+    public int getTitle() {
         return title;
     }
 
-    public void setTitle(String title) {
+    public void setTitle(int title) {
         this.title = title;
     }
 
-    public String getSubtitle() {
+    public int getSubtitle() {
         return subtitle;
     }
 
-    public void setSubtitle(String subtitle) {
+    public void setSubtitle(int subtitle) {
         this.subtitle = subtitle;
     }
 
@@ -29,7 +28,7 @@ public class SettingModel {
         this.icon = icon;
     }
 
-    public SettingModel(String title, String subtitle, int icon) {
+    public SettingModel(int title, int subtitle, int icon) {
         this.title = title;
         this.subtitle = subtitle;
         this.icon = icon;

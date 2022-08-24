@@ -10,10 +10,11 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 
+import com.sveltetech.surya.constants.BaseFragment;
 import com.sveltetech.surya.databinding.FragmentViewProfilePictureBinding;
 
 
-public class ViewProfilePictureFragment extends Fragment {
+public class ViewProfilePictureFragment extends BaseFragment {
 
     static final String ARG_PROFILE_PHOTO = "profile_photo";
     static final String ARG_DISPLAY_NAME = "display_name";
@@ -33,7 +34,7 @@ public class ViewProfilePictureFragment extends Fragment {
             display_name = getArguments().getString(ARG_DISPLAY_NAME);
         }
       //  binding.setProfilePhotoUrl(profile_photo_url);
-      //  binding.setDisplayName(display_name);
+       // binding.setDisplayName(display_name);
         binding.toolbar.setNavigationOnClickListener(v ->
                 Navigation.findNavController(requireView()).navigateUp());
         return binding.getRoot();

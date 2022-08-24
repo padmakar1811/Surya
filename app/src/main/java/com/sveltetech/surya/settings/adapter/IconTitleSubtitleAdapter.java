@@ -26,7 +26,7 @@ public class IconTitleSubtitleAdapter extends RecyclerView.Adapter<IconTitleSubt
     }
 
     public interface ItemActionListener {
-        void onClickView(String title);
+        void onClickView(int title);
     }
 
     public void setItemActionListener(ItemActionListener mItemActionListener) {
@@ -61,9 +61,11 @@ public class IconTitleSubtitleAdapter extends RecyclerView.Adapter<IconTitleSubt
             this.binding = binding;
         }
 
-        void bindTo(String titlename, String subtitlename, Integer icon) {
+        void bindTo(int titlename, int subtitlename, Integer icon) {
             binding.title.setText(titlename);
-            binding.subtitle.setText(subtitlename);
+            if(subtitlename!=0){
+                binding.subtitle.setText(subtitlename);
+            }
             binding.icon.setImageResource(icon);
 
             binding.getRoot().setOnClickListener(v -> {

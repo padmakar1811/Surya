@@ -50,9 +50,9 @@ public class SettingsFragment extends BaseFragment {
         super.onViewCreated(view, savedInstanceState);
 
         settingModelList.clear();
-        settingModelList.add(new SettingModel(getResources().getString(R.string.account),getResources().getString(R.string.privacy_security_change_number),R.drawable.ic_account));
-        settingModelList.add(new SettingModel(getResources().getString(R.string.chats),getResources().getString(R.string.theme_wallpapers_chat_history),R.drawable.ic_chat));
-        settingModelList.add(new SettingModel(getResources().getString(R.string.help),getResources().getString(R.string.faq_contact_us_privacy_policy),R.drawable.ic_help));
+        settingModelList.add(new SettingModel(R.string.account,R.string.privacy_security_change_number,R.drawable.ic_account));
+        settingModelList.add(new SettingModel(R.string.chats,R.string.theme_wallpapers_chat_history,R.drawable.ic_chat));
+        settingModelList.add(new SettingModel(R.string.help,R.string.faq_contact_us_privacy_policy,R.drawable.ic_help));
 
 
         binding.recyclerView.setHasFixedSize(true);
@@ -63,17 +63,20 @@ public class SettingsFragment extends BaseFragment {
 
 
 
-  /*      adapter.setItemActionListener(title -> {
+       adapter.setItemActionListener(title -> {
             switch (title) {
-                case getResources().getString(R.string.account):
+                case R.string.account:
+                    Navigation.findNavController(requireView())
+                            .navigate(R.id.action_settingsFragment_to_recycleViewFragment, navigateToAccount());
                     break;
                 case R.string.chats:
-                  //  Navigation.findNavController(requireView()).navigate(R.id.action_settingsFragment_to_recycleViewFragment);
+                    //Navigation.findNavController(requireView()).navigate(R.id.action_settingsFragment_to_chatsPreferenceFragment);
                     break;
                 case R.string.help:
+                 //   Navigation.findNavController(requireView()).navigate(R.id.action_settingsFragment_to_recycleViewFragment, navigateToHelp());
                     break;
             }
-        });*/
+        });
 
        binding.profileName.setOnClickListener(v ->
                Navigation.findNavController(requireView()).navigate(R.id.action_settingsFragment_to_viewprofileFragment));
@@ -88,4 +91,20 @@ public class SettingsFragment extends BaseFragment {
         super.onDetach();
         binding = null;
     }
+    @NonNull
+    private Bundle navigateToAccount() {
+        Bundle bundle = new Bundle();
+
+        ArrayList<SettingModel> subsettingModelList=new ArrayList<>();
+        ArrayList<Integer> actions = new ArrayList<>();
+
+        subsettingModelList.add(new SettingModel(R.string.privacy,0,R.drawable.ic_lock_grey_24dp));
+        subsettingModelList.add(new SettingModel(R.string.delete_my_account,0,R.drawable.ic_delete_grey_24dp));
+
+        bundle.putString(ARG_TITLE, getString(R.string.account));
+        return bundle;
+    }
+
+
+
 }
