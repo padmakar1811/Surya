@@ -1,27 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
-    <data>
-
-        <import type="android.view.View" />
-        <import type="android.R" />
-        <variable
-            name="title"
-            type="Integer" />
-        <variable
-            name="subtitle"
-            type="Integer" />
-        <variable
-            name="null_int"
-            type="Integer" />
-        <variable
-            name="icon"
-            type="android.graphics.drawable.Drawable" />
-
-    </data>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary">
@@ -33,25 +14,35 @@
             android:layout_marginStart="24dp"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"
+            android:src="@drawable/ic_share_24dp"
             android:foregroundTint="@color/colorAccent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0" />
 
-        <TextView
-            android:id="@+id/title"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:textColor="@color/white"
-            android:textSize="18sp"
-            app:layout_constraintBottom_toTopOf="@+id/subtitle"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/icon"
-            app:layout_constraintTop_toTopOf="@+id/icon"
-            tools:text="Notifications" />
+    <TextView
+        android:id="@+id/ivborder"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:background="@color/colorAccent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/icon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:textAppearance="@style/TextFieldBold"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/subtitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivborder"
+        app:layout_constraintTop_toTopOf="@+id/ivborder" />
 
         <TextView
             android:id="@+id/subtitle"
@@ -61,11 +52,8 @@
             android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="@+id/icon"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/icon"
-            app:layout_constraintTop_toBottomOf="@+id/title"
-            tools:text="Message, group &amp; call tones" />
+            app:layout_constraintStart_toEndOf="@+id/ivborder"
+            app:layout_constraintTop_toBottomOf="@+id/title" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-</layout>
 

@@ -1,5 +1,6 @@
 package com.sveltetech.surya.settings.adapter;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
@@ -9,24 +10,23 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.sveltetech.surya.R;
 import com.sveltetech.surya.databinding.AdapterTitleSubtitleListItemBinding;
+import com.sveltetech.surya.settings.model.SettingModel;
 
 import java.util.List;
 
 public class IconTitleSubtitleAdapter extends RecyclerView.Adapter<IconTitleSubtitleAdapter.ViewHolder> {
 
-    private List<Integer> titles;
-    private List<Integer> subtitles;
-    private List<Integer> icons;
+    private Context context;
+    private List<SettingModel> settingModelList;
     private ItemActionListener mItemActionListener;
 
-    public IconTitleSubtitleAdapter(List<Integer> titles, List<Integer> subtitles, List<Integer> icons) {
-        this.titles = titles;
-        this.subtitles = subtitles;
-        this.icons = icons;
+    public IconTitleSubtitleAdapter(Context context,List<SettingModel> settingModelList) {
+        this.context=context;
+        this.settingModelList = settingModelList;
     }
 
     public interface ItemActionListener {
-        void onClickView(Integer title);
+        void onClickView(String title);
     }
 
     public void setItemActionListener(ItemActionListener mItemActionListener) {
@@ -43,12 +43,12 @@ public class IconTitleSubtitleAdapter extends RecyclerView.Adapter<IconTitleSubt
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.setItemActionListener(mItemActionListener);
-        holder.bindTo(titles.get(position), subtitles.get(position), icons.get(position));
+        holder.bindTo(settingModelList.get(position).getTitle(), settingModelList.get(position).getSubtitle(),settingModelList.get(position).getIcon());
     }
 
     @Override
     public int getItemCount() {
-        return titles.size();
+        return settingModelList.size();
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
@@ -61,14 +61,13 @@ public class IconTitleSubtitleAdapter extends RecyclerView.Adapter<IconTitleSubt
             this.binding = binding;
         }
 
-        void bindTo(Integer title, Integer subtitle, Integer icon) {
-            binding.setNullInt(R.string.null_t);
-            binding.setTitle(title);
-            binding.setSubtitle(subtitle);
-            binding.setIcon(binding.getRoot().getResources().getDrawable(icon, null));
+        void bindTo(String titlename, String subtitlename, Integer icon) {
+            binding.title.setText(titlename);
+            binding.subtitle.setText(subtitlename);
+            binding.icon.setImageResource(icon);
 
             binding.getRoot().setOnClickListener(v -> {
-                itemActionListener.onClickView(title);
+                itemActionListener.onClickView(titlename);
             });
         }
 

@@ -55,10 +55,10 @@ public class RecycleViewFragment extends Fragment {
 
         binding.recyclerView.setHasFixedSize(true);
         binding.recyclerView.setLayoutManager(new LinearLayoutManager(requireActivity(), RecyclerView.VERTICAL, false));
-        IconTitleSubtitleAdapter adapter = new IconTitleSubtitleAdapter(titles, subtitles, icons);
+       /* IconTitleSubtitleAdapter adapter = new IconTitleSubtitleAdapter(titles, subtitles, icons);
         binding.recyclerView.setAdapter(adapter);
-
-        adapter.setItemActionListener(title -> {
+*/
+     /*   adapter.setItemActionListener(title -> {
 
             for (int i = 0; i < titles.size(); i++) {
                 if(title.equals(titles.get(i))) {
@@ -67,7 +67,7 @@ public class RecycleViewFragment extends Fragment {
                 }
             }
 
-        });
+        });*/
     }
 
     @Override

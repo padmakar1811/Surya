@@ -154,7 +154,7 @@ public class MainFragment extends BaseFragment {
                          showMessage(getString(R.string.underdev));
                         break;
                     case R.id.menu_main_settings:
-                        startActivity(new Intent(requireActivity(), SettingsActivity.class));
+                         goToActivity(SettingsActivity.class,null);
                         break;
                 }
                 return true;

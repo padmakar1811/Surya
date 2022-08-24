@@ -30,7 +30,7 @@ public class SettingsActivity extends BaseActivity {
 ////        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
 ////        NavigationUI.setupWithNavController(navView, navController);
 
-      /* navController.addOnDestinationChangedListener(new NavController.OnDestinationChangedListener() {
+      navController.addOnDestinationChangedListener(new NavController.OnDestinationChangedListener() {
             @Override
             public void onDestinationChanged(@NonNull NavController controller, @NonNull NavDestination destination, @Nullable Bundle arguments) {
                 if (destination.getId() == R.id.recycleViewFragment) {
@@ -42,7 +42,7 @@ public class SettingsActivity extends BaseActivity {
                     binding.toolbar.setTitle(destination.getLabel());
                 }
             }
-        });*/
+        });
 
         binding.toolbar.setNavigationOnClickListener(v -> {
             if (navController.getCurrentDestination().getId() == R.id.settingsFragment)

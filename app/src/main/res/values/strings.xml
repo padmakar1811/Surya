@@ -121,11 +121,11 @@
     <string name="account">Account</string>
     <string name="notifications">Notifications</string>
     <string name="data_and_storage_usage">Data and storage usage</string>
-    <string name="privacy_security_change_number">Privacy, security, change number</string>
-    <string name="theme_wallpapers_chat_history">Theme, wallpapers, chat history</string>
+    <string name="privacy_security_change_number">Privacy, delete number</string>
+    <string name="theme_wallpapers_chat_history">Theme change</string>
     <string name="message_group_call_tones">Message, group &amp; call tones</string>
     <string name="network_usage_auto_download">Network usage, auto-download</string>
-    <string name="faq_contact_us_privacy_policy">FAQ, contact us, privacy policy</string>
+    <string name="faq_contact_us_privacy_policy">Terms and privacy policy</string>
     <string name="questions_need_help">Questions? Need help?</string>
     <string name="app_info">App info</string>
     <string name="terms_and_privacy_policy">Terms and Privacy Policy</string>
@@ -155,7 +155,7 @@
     <string name="last_seen_month_day">last seen %1$s %2$s, %3$s</string>
     <string name="qr_code">QR code</string>
     <string name="reset_qr_code">Reset QR code</string>
-    <string name="this_is_not_your_username_or_pin_this_name_will_be_visible_to_your_wapp_contacts">This is not your username or pin. This name will be visible to your WApp contacts.</string>
+    <string name="this_is_not_your_username_or_pin_this_name_will_be_visible_to_your_wapp_contacts">This is not your username or pin. This name will be visible to your App contacts.</string>
     <string name="select_about">Select About</string>
     <string name="currently_set_to">Currently set to</string>
     <string name="today">Today</string>
